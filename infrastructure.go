@@ -277,6 +277,7 @@ func (c *Client) sendCmd(cmd interface{}) chan *response {
 	if err != nil {
 		return newFutureError(err)
 	}
+	fmt.Printl(marshalledJSON)
 
 	// Generate the request and send it along with a channel to respond on.
 	responseChan := make(chan *response, 1)
