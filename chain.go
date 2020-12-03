@@ -9,7 +9,6 @@ import (
 	"bytes"
 	"encoding/hex"
 	"encoding/json"
-	"fmt"
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
@@ -206,8 +205,6 @@ func (c *Client) GetBlockVerboseTxAsync(blockHash *chainhash.Hash) FutureGetBloc
 	}
 
 	cmd := btcjson.NewGetBlockCmd(hash, btcjson.Bool(true), btcjson.Bool(true))
-	fmt.Println("**** cmd: ")
-	fmt.Printf("%#v", *cmd)
 	return c.sendCmd(cmd)
 }
 
