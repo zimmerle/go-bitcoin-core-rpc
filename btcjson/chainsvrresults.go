@@ -28,23 +28,23 @@ type GetBlockHeaderVerboseResult struct {
 // verbose flag is set.  When the verbose flag is not set, getblock returns a
 // hex-encoded string.
 type GetBlockVerboseResult struct {
-	Hash          string        `json:"hash"`
-	Confirmations uint64        `json:"confirmations"`
-	StrippedSize  int32         `json:"strippedsize"`
-	Size          int32         `json:"size"`
-	Weight        int32         `json:"weight"`
-	Height        int64         `json:"height"`
-	Version       int32         `json:"version"`
-	VersionHex    string        `json:"versionHex"`
-	MerkleRoot    string        `json:"merkleroot"`
-	Tx            []string      `json:"tx,omitempty"`
-	RawTx         []TxRawResult `json:"rawtx,omitempty"`
-	Time          int64         `json:"time"`
-	Nonce         uint32        `json:"nonce"`
-	Bits          string        `json:"bits"`
-	Difficulty    float64       `json:"difficulty"`
-	PreviousHash  string        `json:"previousblockhash"`
-	NextHash      string        `json:"nextblockhash,omitempty"`
+	Hash          string              `json:"hash"`
+	Confirmations uint64              `json:"confirmations"`
+	StrippedSize  int32               `json:"strippedsize"`
+	Size          int32               `json:"size"`
+	Weight        int32               `json:"weight"`
+	Height        int64               `json:"height"`
+	Version       int32               `json:"version"`
+	VersionHex    string              `json:"versionHex"`
+	MerkleRoot    string              `json:"merkleroot"`
+	Tx            []TxRawDecodeResult `json:"tx,omitempty"`
+	RawTx         []TxRawResult       `json:"rawtx,omitempty"`
+	Time          int64               `json:"time"`
+	Nonce         uint32              `json:"nonce"`
+	Bits          string              `json:"bits"`
+	Difficulty    float64             `json:"difficulty"`
+	PreviousHash  string              `json:"previousblockhash"`
+	NextHash      string              `json:"nextblockhash,omitempty"`
 }
 
 // CreateMultiSigResult models the data returned from the createmultisig
