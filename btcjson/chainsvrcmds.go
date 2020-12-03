@@ -169,7 +169,8 @@ type GetBlockCmd struct {
 func NewGetBlockCmd(hash string, verbose, verboseTx *bool) *GetBlockCmd {
 	return &GetBlockCmd{
 		Hash:      hash,
-		Verbose:   verbose
+		Verbose:   2,
+		VerboseTx: verboseTx,
 	}
 }
 
