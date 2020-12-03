@@ -12,7 +12,7 @@ import (
 	"testing"
 
 	"github.com/btcsuite/btcd/wire"
-	"github.com/stevenroose/go-bitcoin-core-rpc/btcjson"
+	"github.com/zimmerle/go-bitcoin-core-rpc/btcjson"
 )
 
 // TestChainSvrCmds tests all of the chain server commands marshal and unmarshal
@@ -196,9 +196,8 @@ func TestChainSvrCmds(t *testing.T) {
 			},
 			marshalled: `{"jsonrpc":"1.0","method":"getblock","params":["123",true,true],"id":1}`,
 			unmarshalled: &btcjson.GetBlockCmd{
-				Hash:      "123",
-				Verbose:   btcjson.Bool(true),
-				VerboseTx: btcjson.Bool(true),
+				Hash:    "123",
+				Verbose: 1,
 			},
 		},
 		{
