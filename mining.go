@@ -11,7 +11,7 @@ import (
 
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcutil"
-	"github.com/stevenroose/go-bitcoin-core-rpc/btcjson"
+	"github.com/zimmerle/go-bitcoin-core-rpc/btcjson"
 )
 
 // FutureGenerateResult is a future promise to deliver the result of a
